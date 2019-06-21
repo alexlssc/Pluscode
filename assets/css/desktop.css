@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  min-width: 300px;
+}
+
+
+.header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 700;
+  color: #fff;
+  overflow: hidden;
+}
+
+h2{
+  font-size:2.5em;
+  font-weight: 700;
+  margin: auto;
+  text-align: center;
+}
+
+.title{
+  font-size: 1.5em;
+}
+
+nav{
+  height: 60px;
+  display: flex;
+  width:100%;
+  max-width: 1024px;
+  text-decoration: none;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav a {
+  color:#fff;
+  position: relative;
+  overflow: hidden;
+  transform: perspective(1px) translateZ(0);
+  font-size: 0.8em;
+}
+
+nav a:before{
+  content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #fff;
+    height: 1px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+nav a:hover:before{
+  left: 0;
+  right: 0;
+}
+
+.hamburger_icon{
+  display: none;
+}
+
+.landing_page{
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.landing_content{
+  height: 100%;
+  width:100%;
+  display: grid;
+  grid-template-columns: repeat(16, minmax(20px, 1fr));
+  grid-template-rows: repeat(16, minmax(42px, 1fr));
+}
+
+.landing_text{
+  grid-column: 1/ 18;
+  grid-row: 3/ 5;
+  justify-self:center;
+  font-weight: 800;
+  font-size: 8em;
+  color: #fff;
+}
+
+.under_text{
+  color: #fff;
+  font-size: 1em;
+}
+
+.left_under_text{
+  grid-column: 1 / 18;
+  grid-row: 6 / 9;
+  justify-self:center;
+}
+
+.right_under_text{
+  grid-column: 9 / 12;
+  grid-row: 6 / 9;
+}
+
+.button_landing{
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+
+.button_landing::before{
+  content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2B32B2;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    border-radius: 10px;
+}
+
+.button_landing:hover:before{
+  -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66)
+}
+
+.button_landing:hover{
+  color:#fff;
+}
+.about_button_landing{
+  grid-column: 8 / 10;
+  grid-row: 9 / 10;
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2B32B2;
+  font-weight: 600;
+}
+
+.portfolio_button_landing{
+  grid-column: 8 / 10;
+  grid-row: 11 / 12;
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2B32B2;
+  font-weight: 600;
+}
+
+#bottom_svg{
+  grid-column: 1 / 18;
+  grid-row: 14 / 18;
+}
+
+
+.about_holder{
+  margin: 200px auto;
+  padding: 200px auto;
+  width:60vw;
+  background-image: url("../images/bgAbout.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 50px 0 ;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.about_holder:hover{
+}
+
+.about_holder h2{
+  color: #fff;
+  display: block;
+  width: 100%;
+}
+
+.text_about{
+  color: #fff;
+  line-height: 2em;
+  width: 50%;
+  margin: auto;
+  padding: 25px 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+.services_holder{
+  margin: 200px auto;
+  width: 80%;
+}
+
+.services_holder h2{
+  color: #2B32B2;
+}
+
+.services_content_holder{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.services_box{
+  width: 20%;
+  height: 200px;
+  margin-top: 50px;
+  padding: 50px;
+  color: #2B32B2;
+  transition: all 0.2s linear;
+  position: relative;
+  overflow: hidden;
+}
+
+.services_box::after{
+  content: '';
+  position: absolute;
+  top:0;
+  left:0;
+  width: 0%;
+  height:100%;
+  background: background: rgb(20,136,204);
+  background: linear-gradient(180deg, rgba(20,136,204,1) 0%, rgba(43,50,178,1) 100%);
+  transition: all 0.2s ease;
+  z-index: -1;
+}
+
+.services_box:hover::after{
+  width:100%;
+}
+
+.services_box:hover{
+  color: #fff;
+}
+
+.portfolio_holder{
+  margin: 200px auto;
+}
+
+.portfolio_holder h2{
+  color: #2B32B2;
+  margin-bottom: 100px;
+}
+
+.box_a{
+  grid-area: A;
+  background: url("../images/daciLight.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.box_a svg{
+  width:70%;
+  z-index:3;
+}
+
+.box_b{
+  grid-area: B;
+  background: url("../images/michaelBG.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.box_b h3{
+  display:block;
+  z-index:3;
+}
+
+.box_b h4{
+  font-weight: 200;
+  z-index: 3;
+}
+.box_c{
+  grid-area: C;
+  background: url("../images/almondBG.jpeg") no-repeat center;
+  background-size: cover;
+}
+
+.box_c img{
+  z-index: 3;
+  width: 70%;
+}
+.box_d{
+  grid-area: D;
+  background: url("../images/nourishBG.jpg") no-repeat center;
+  background-size: cover;
+}
+.box_d img{
+  z-index: 3;
+  width: 70%;
+}
+.box_e{
+  grid-area: E;
+  background: url("../images/journeyBG.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.box_e img{
+  z-index: 3;
+  width: 70%;
+}
+
+.porfolio_box{
+  height:250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 2s ease;
+  overflow: hidden;
+  color:#fff;
+}
+
+
+.porfolio_box::before{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: background: rgb(20,136,204);
+  background: linear-gradient(180deg, rgba(20,136,204) 0%, rgba(43,50,178) 100%);
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  transition: all 0.5s ease;
+}
+
+.porfolio_box:hover::before{
+  opacity: 0.7;
+}
+
+
+
+.portfolio_grid{
+  display: grid;
+  margin: auto;
+  width: 80%;
+  grid-template-columns: repeat(6, minmax(50px, 1fr));
+  grid-template-rows: repeat(2, minmax(50px, 1fr));
+
+  grid-template-areas:
+  'A A B B C C'
+  '. D D E E .';
+}
+
+.contact_holder{
+  width: 60%;
+  margin: 200px auto;
+}
+
+.contact_holder h2{
+  color: #2B32B2;
+  margin-bottom: 100px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+textarea, input{
+    border: 1px solid #2B32B2;
+    color: #2B32B2;
+    font-weight: 600;
+    width: 100%;
+    border-radius: 25px;
+    padding: 0 10px;
+
+}
+
+textarea{
+  width: 100%;
+  padding: 10px;
+}
+
+textarea::placeholder, input::placeholder{
+  color: #2B32B2;
+  font-weight: 600;
+}
+
+
+.name_input{
+  grid-area: A;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.mail_input{
+  grid-area: B;
+  margin-bottom: 10px;
+  height: 40px;
+}
+
+.text_input{
+  grid-area: C;
+  height: 300px;
+}
+
+.button_form{
+  grid-area: D;
+  height: 50px;
+  width:80%;
+}
+
+form{
+  height: 300px;
+  width: 100%;
+}
+
+.button_form{
+  width: 10%;
+  float: right;
+  transition: all 0.5s ease;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.button_form:hover{
+  background: #2B32B2;
+  color: #fff;
+  cursor: pointer;
+
+}
+
+.contact_holder p{
+  margin: 20px auto;
+  text-align: center;
+  color: #2B32B2;
+}
+
+.contact_holder h3{
+  margin: 20px auto;
+  text-align: center;
+  color: #2B32B2;
+}
+
+/* Adapt nav holder to smaller devices */
+@media (max-width:615px){
+
+  .header{
+    justify-content: space-between;
+  }
+
+  nav{
+    position: absolute;
+    top: -150%;
+    height: 100vh;
+    background: linear-gradient(180deg, #1488CC 0%, #2B32B2 100%);
+    width: 100%;
+    z-index: 20;
+    display:block;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 100px 0;
+    transition: all 1s ease;
+  }
+
+  .show_nav{
+    top: 0;
+    transition: all 1s ease;
+  }
+
+  .show_title{
+    top: 30px !important;
+    transition-delay: 0.5s !important;
+    transition: all 1s ease;
+  }
+
+nav a{
+    width: 100%;
+    display: block;
+    font-size: 2em;
+    font-weight: 700;
+    margin: 40px 20px;
+  }
+
+  .title{
+    position: absolute;
+    right: 20px;
+    top: -100px;
+    z-index: 33;
+    transition: all 1s ease;
+  }
+
+  .hamburger_icon{
+    display: flex;
+    background: #fff;
+    border-radius: 50px;
+    height:50px;
+    width: 50px;
+    margin: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    z-index: 21;
+  }
+
+  .hamburger_bar{
+    height:2px;
+    width: 60%;
+    background: #1488CC;
+    margin: 3px auto;
+  }
+}
+
+/* Adapt landing holder to smaller devices */
+@media (max-width: 1024px) {
+
+    .title{
+      padding-left: 20px;
+    }
+
+    .landing_text{
+      grid-row: 4 / 6;
+      font-size: 5em;
+    }
+
+    .about_button_landing{
+      grid-column: 7 / 11;
+    }
+
+    .portfolio_button_landing{
+      grid-column: 7 / 11;
+    }
+
+    #bottom_svg{
+      align-self: end;
+    }
+
+    .button_form{
+      width: 30%;
+    }
+}
+
+@media (max-width:500px) {
+  .landing_text{
+    font-size: 3em;
+  }
+
+  .button_landing{
+    grid-column: 6 / 12;
+  }
+}
+
+/* Adapt about holder to smaller devices */
+@media (max-width: 700px){
+  .about_holder{
+    width: auto;
+  }
+
+  .text_about{
+    width:80%;
+  }
+}
+
+
+/* Adapt service holder to smaller devices */
+@media (max-width:960px){
+  .services_box{
+    width: auto;
+    height: auto;
+    margin-top: 0;
+  }
+}
+
+/* Adapt portfolio holder to smaller devices */
+@media (max-width:900px){
+  .portfolio_grid{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .portfolio_grid a{
+    width:100%;
+  }
+}
